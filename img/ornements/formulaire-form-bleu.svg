@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="884.198" height="640.592" viewBox="0 0 884.198 640.592">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#008ebc"/>
+      <stop offset="1" stop-color="#030753"/>
+    </linearGradient>
+  </defs>
+  <path id="Tracé_118" data-name="Tracé 118" d="M2257.964,268.934,1731.656,527.577l189.472,381.949,694.726-156.389Z" transform="translate(-1731.656 -268.934)" opacity="0.3" fill="url(#linear-gradient)"/>
+</svg>
