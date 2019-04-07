@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Form Labels Interaction
 
     // IN
-    /* $('.input').focusin(function () {
+    $('.input').focusin(function () {
         var name = $(this).attr('id');
         var labels = $('label');
         for (i = 0; i < labels.length; i++) {
@@ -24,7 +24,7 @@ $(document).ready(function () {
                 }
             }
         }
-    }); */
+    });
 
     // Off Canevas
 /*
@@ -39,25 +39,7 @@ $(document).ready(function () {
     })
 */
 
-    var ornements = {
-        "sets": [{
-                blue: './img/ornements/form-travaux-1-bleu.svg',
-                white: './img/ornements/form-travaux-1-blanc.svg'
-            },
-            {
-                blue: './img/ornements/form-travaux-2-bleu.svg',
-                white: './img/ornements/form-travaux-2-blanc.svg'
-            },
-            {
-                blue: './img/ornements/form-travaux-3-bleu.svg',
-                white: './img/ornements/form-travaux-3-blanc.svg'
-            },
-            {
-                blue: './img/ornements/form-travaux-4-bleu.svg',
-                white: './img/ornements/form-travaux-4-blanc.svg'
-            }
-        ]
-    }
+    var wOrnement = './img/ornements/form_work_final.svg'
 
     var picBg = {
         portrait: './img/ornements/form-photographie-portrait-bleu.svg',
@@ -78,10 +60,6 @@ $(document).ready(function () {
 
         for (i = (data.works.length)-1; i > -1; i--) {
 
-            var set = Math.floor(Math.random() * 4);
-            var ornBlue = ornements.sets[set].blue;
-            var ornWhite = ornements.sets[set].white;
-
             var wId = data.works[i].id;
             var wTitle = data.works[i].title;
             var wSubTitle = data.works[i].subTitle;
@@ -90,19 +68,19 @@ $(document).ready(function () {
             wGrid.append("<div w-id='" + wId + "' class='project-wrapper'></div>");
             var wWrapper = $("[w-id=" + i + "]");
 
-            wWrapper.append("<div class='work-visual-wrapper'></div>");
-            var wVisualWrapper = wWrapper.find('.work-visual-wrapper');
-
-            wVisualWrapper.append("<div class='work-shadow'><img src='" + shadows.works + "' alt='background-ornement'></div>");
-            wVisualWrapper.append("<div class='work-visual-blue'><img src='" + ornBlue + "' alt='background-ornement'></div>");
-            wVisualWrapper.append("<div class='work-visual-white'><img src='" + ornWhite + "' alt='shadow-ornement'></div>");
-            
             wWrapper.append("<div class='work-content-wrapper'></div>");
             var wConWrapper = wWrapper.find('.work-content-wrapper');
             
             wConWrapper.append("<h3>" + wTitle + "</h3>");
             wConWrapper.append("<p>" + wSubTitle + "</p>");
             wConWrapper.append("<div class='work-logo-wrapper'><img src='" + wUrl + "' alt='" + wTitle + "'></div>");
+
+            wWrapper.append("<div class='work-visual-wrapper'></div>");
+            var wVisualWrapper = wWrapper.find('.work-visual-wrapper');
+
+            wVisualWrapper.append("<div class='work-visual'><img src='" + wOrnement + "' alt='background-ornement'></div>");
+            wVisualWrapper.append("<div class='work-shadow'><img src='" + shadows.works + "' alt='background-ornement'></div>");
+            
         }
 
     }).done(function (data) {
@@ -175,21 +153,21 @@ $(document).ready(function () {
     //var photosData = $.getJSON("https://api.myjson.com/bins/e0ly8", function (data2) {
 
         var pLast = (data2.photos.length)-1;
-        var pId = data2.photos[pLast].id;
         var pTitle = data2.photos[pLast].title;
         var pUrl = data2.photos[pLast].url;
         var pFormat = data2.photos[pLast].format;
 
         lastPhoto.append("<div class='last-photo-wrapper'></div>");
-        var wrapper = $("[p-id=" + pLast + "]");
+        var wrapper = $(".last-photo-wrapper");
         
         if (pFormat == 'paysage') {
             wrapper.append("<div class='photo-visual-paysage'><img src='" + picBg.paysage + "' alt='background-ornement'></div>");
+            wrapper.append("<div class='last-photo-content-wrapper paysage'></div>");
         } else {
             wrapper.append("<div class='photo-visual-portrait'><img src='" + picBg.portrait + "' alt='background-ornement'></div>");
+            wrapper.append("<div class='last-photo-content-wrapper portrait'></div>");
         }
 
-        wrapper.append("<div class='last-photo-content-wrapper'></div>");
         var lastPhotoContent = wrapper.find('.last-photo-content-wrapper');
 
         lastPhotoContent.append("<div class='home-photo-wrapper'><img src='" + pUrl + "' alt='" + pTitle + "'>");

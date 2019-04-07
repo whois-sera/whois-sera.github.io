@@ -1,13 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="914.002" height="908.918" viewBox="0 0 914.002 908.918">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="763" height="861.9" viewBox="0 0 763 861.9">
   <defs>
-    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#008ebc"/>
-      <stop offset="0.193" stop-color="#01679e"/>
-      <stop offset="0.449" stop-color="#023b7b"/>
-      <stop offset="0.678" stop-color="#031a62"/>
-      <stop offset="0.869" stop-color="#030753"/>
-      <stop offset="1" stop-color="#04004e"/>
+    <linearGradient id="linear-gradient" x1="1.097" y1="0.451" x2="-0.226" y2="0.431" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#04004e"/>
+      <stop offset="1" stop-color="#008ebc"/>
     </linearGradient>
   </defs>
-  <path id="Tracé_118" data-name="Tracé 118" d="M2176.645,268.934l-444.989,218.68,160.2,322.934,587.385-132.225Z" transform="translate(-682.594 -1396.364) rotate(44)" opacity="0.3" fill="url(#linear-gradient)"/>
+  <path id="form_photo_portrait" d="M762.6,198.9,142.9-.4-.4,450.7,675,861.5Z" transform="translate(0.4 0.4)" opacity="0.3" fill="url(#linear-gradient)"/>
 </svg>
