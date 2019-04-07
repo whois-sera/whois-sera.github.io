@@ -31,6 +31,12 @@ h2 {
     font-size: 50px;
 }
 
+#modal-window-work {
+    h2 {
+        font-size: 35px;
+    }
+}
+
 h3 {
     font-family: $ailerons;
     font-size: 24px;
@@ -89,6 +95,14 @@ button {
     font-family: $quicksand;
 }
 
+.font-title {
+    font-size: 24px;
+}
+
+.font-p {
+    font-size: 18px;
+}
+
 // Global and Reset ********************
 
 * {
@@ -114,80 +128,278 @@ nav {
         flex-direction: row;
         align-items: center;
         list-style: none;
+        margin: 0px;
+        padding: 0px;
     }
-}
-
-// Modals and off-canvas Display ********************
-
-#off-canvas {
-    display: none;
-}
-
-#modal-window-work {
-    display: none;
-}
-
-#modal-window-photo {
-    display: none;
 }
 
 // Wrappers ********************
 
 .site-wrapper {
+    display: none;
     width: 100%;
     overflow: hidden;
 }
 
-// Header ********************
-
-#header {
-    position: relative;
+.site-wrapper.display {
+    display: block;
 }
 
-#burger {
+// Off-Canvas ********************
+
+#close {
+    cursor: pointer;
+}
+
+#off-canvas {
+    display: block;
     position: fixed;
-    top: 50px;
-    left: 50px;
-}
-
-.header-ill {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.site-title {
-    position: absolute;
-    background-color: $alphaWhite;
-    padding: 40px;
-    top: 280px;
-    left: 280px;
-}
-
-// About ********************
-
-#about {
-
-    h2 {
-        text-align: center;
-    }
+    z-index: 200;
+    width: 100%;
+    padding: 50px;
+    top: -100%;
+    opacity: 0;
+    transition: all 0.30s ease-in-out;
 
     .module-wrapper {
-        width: 1200px;
-        margin: 0 auto;
+        background-color: #F2F2F2;
+    }
+
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    li {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 50px;
+        }
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+}
+
+#off-canvas.visible {
+    top: 0%;
+    opacity: 1;
+    transition: all 0.30s ease-in-out;
+}
+
+// Modal nav ********************
+
+.modal-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #F2F2F2;
+    margin-bottom: 40px;
+
+    .return {
+        cursor: pointer;
+    }
+
+    li {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 50px;
+        }
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+}
+
+// Modal Work ********************
+
+#modal-window-work {
+    display: none;
+    width: 100%;
+    background-color: #ffffff;
+
+    .module-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #maquette {
+        width: 50%;
+        height: 100vh;
+    }
+
+    #charte {
+        width: 50%;
+        padding: 30px;
+    }
+
+     .charte-content {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+    
+    #charte-title {
+        margin-bottom: 40px;
+    }
+
+    .colors {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    #charte-color1,
+    #charte-color2 {
+        margin-right: 40px;
+    }
+
+    .color-visual-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .module-content {
+    .charte-shadow {
+        filter: blur(5px);
+    }
+
+    #logo-charte {
+        margin-bottom: 40px;
+    }
+
+    .logo-wrapper {
+
+        img {
+            height: 150px;
+        }
+    }
+}
+
+#modal-window-work.display {
+    display: block;
+}
+
+// Modal Photo ********************
+
+#modal-window-photo {
+    display: none;
+    width: 100%;
+    background-color: #ffffff;
+
+    .module-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+#modal-window-photo.visible {
+    display: block;
+}
+
+.photo-grid-wrapper {
+    width: 50%;
+}
+
+#photo-display {
+    width: 50%;
+    padding: 30px;
+}
+
+#modal-window-photo.display {
+    display: block;
+}
+
+// Header ********************
+
+#burger {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.10s ease-in-out;
+    opacity: 1;
+}
+
+#burger.hide {
+    opacity: 0;
+}
+
+#header {
+    margin-bottom: 250px;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100%;
         position: relative;
+    }
+}
+
+.header-ill {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 83%;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.site-title {
+    position: absolute;
+    background-color: $alphaWhite;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+// About ********************
+
+#about {
+    margin-bottom: 150px;
+
+    h2 {
+        text-align: center;
+    }
+
+    .module-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .module-content {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+        position: relative;
         margin-bottom: 140px;
     }
 
@@ -197,105 +409,113 @@ nav {
         z-index: 20;
 
         p {
-            background-color: $alphaWhite;
             padding: 50px;
+            background-color: $alphaWhite;
         }
     }
 
-    .about-ornement {
-        position: absolute;
-        z-index: 10;
-        left: 0%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+}
+
+.about-ornement {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
 // Works ********************
 
 #work {
-
-    .module-wrapper {
-        width: 1200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-
-    .module-content {
-        width: 1200px;
-        margin: 0 auto;
-        margin-bottom: 140px;
-    }
+    margin-bottom: 200px;
 
     h2 {
         text-align: center;
         margin-bottom: 70px;
     }
 
-    #work-grid {
-        display: flex;
-        flex-flow: row wrap;
-        width: 100%;
-    }
-
-    .project-wrapper {
-        width: 50%;
-        position: relative;
-        margin-bottom: 350px;
-    }
-
-    .work-visual-wrapper {
+    .module-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        top: 0px;
-        z-index: 10;
+        width: 1200px;
+        margin: 0 auto;
     }
 
-    .work-visual {
-        width: 100%;
-    }
-
-    .work-shadow {
-
-        img {
-            filter: blur(20px)
-        }
-    }
-
-    .work-content-wrapper {
+    .module-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         position: relative;
-        z-index: 20;
+    }
 
-        h3 {
-            max-width: 250px;
-        }
+}
 
-        p {
-            margin-left: 20px;
-        }
+#work-grid {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
 
-        div {
-            margin-left: 100px;
-        }
+.project-wrapper {
+    width: 50%;
+    position: relative;
+    padding: 50px;
+}
+
+.work-visual-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.work-visual {
+    width: 100%;
+}
+
+.work-shadow {
+
+    img {
+        filter: blur(20px)
+    }
+}
+
+.work-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    z-index: 20;
+
+    h3 {
+        max-width: 300px;
+    }
+
+    p {
+        margin-left: 20px;
+    }
+
+    .work-logo-wrapper {
+        margin-left: 100px;
     }
 }
 
 // Last Photo *******************
 
 #photo {
+    margin-bottom: 300px;
 
     h2 {
         text-align: center;
+        margin-bottom: 70px;
     }
 
     .module-wrapper {
@@ -308,13 +528,23 @@ nav {
     }
 
     .module-content {
-        margin-bottom: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 150px;
     }
 
 }
 
 .last-photo-wrapper {
     position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .last-photo-content-wrapper {
@@ -322,24 +552,68 @@ nav {
     z-index: 20;
 }
 
+.paysage {
+    width: 80%;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+.portrait {
+    width: 44%;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+    }
+}
+
 .home-photo-info {
-    position: absolute;
-    z-index: 20;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    background-color: $alphaBlack;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     padding: 50px;
+    z-index: 20;
     transition: all 0.15s ease-in-out;
+    background-color: $alphaBlack;
     opacity: 0;
 
     &:hover {
         opacity: 1;
+    }
+}
+
+.photo-visual-portrait {
+    width: 64%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+
+    img {
+        width: 100%;
+    }
+}
+
+.photo-visual-paysage {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+
+    img {
+        width: 100%;
     }
 }
 
@@ -350,53 +624,15 @@ nav {
     }
 }
 
-.paysage {
-
-    img {
-        display: block;
-        width: 950px;
-        margin: 0 auto;
-    }
-}
-
-.portrait {
-
-    img {
-        display: block;
-        width: 520px;
-        margin: 0 auto;
-    }
-}
-
-.photo-visual-portrait {
-    width: 770px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 10;
-
-        img {
-            width: 100%;
-        }
-}
-
-.photo-visual-paysage {
-    width: 1200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 10;
-
-        img {
-            width: 100%;
-        }
-}
-
 // Contact ********************
 
 #contact {
+    margin-bottom: 150px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 70px;
+    }
 
     .module-wrapper {
         width: 1200px;
@@ -410,16 +646,16 @@ nav {
 
 form {
     position: relative;
-    z-index: 20;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 700px;
+    width: 60%;
     margin: 0 auto;
+    z-index: 20;
 
     button {
         display: block;
-        width: 350px;
+        width: 320px;
         height: 100px;
         border: none;
         cursor: pointer;
@@ -432,7 +668,7 @@ form {
 }
 
 .sub-btn {
-    width: 350px;
+    width: 320px;
     margin: 0px;
 }
 
@@ -440,16 +676,17 @@ fieldset {
     border: none;
     position: relative;
     margin: 0 auto;
+    width: 100%;
     padding: 0px;
     margin-bottom: 40px;
 }
 
 label {
     display: block;
-    width: 700px;
+    width: 100%;
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: 20px;
     transition: all 0.25s ease-in-out;
     transform: translateY(-50%);
     z-index: 20;
@@ -459,27 +696,29 @@ label {
 
 .translate {
     top: -30px;
+    opacity: 0.4;
     transform: translateY(0%);
 }
 
 label.textarea {
-    top: 20px;
-    left: 0%;
+    top: 35px;
+    left: 20px;
 }
 
 label.textarea.translate {
     top: -30px;
+    opacity: 0.4;
     transform: translateY(0%);
 }
 
 input {
     display: block;
     height: 100px;
-    padding: 10px;
+    padding: 20px;
     border: none;
     position: relative;
     z-index: 10;
-    width: 700px;
+    width: 100%;
     background-color: #ffffff;
 
     &:focus {
@@ -490,8 +729,8 @@ input {
 textarea {
     border: none;
     resize: none;
-    padding: 10px;
-    width: 700px;
+    padding: 20px;
+    width: 100%;
     min-height: 415px;
 
     &:focus {
@@ -501,9 +740,9 @@ textarea {
 
 .form-ornement {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 50px);
     left: 50%;
-    width: 1200px;
+    width: 100%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 10;
 

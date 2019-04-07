@@ -184,19 +184,18 @@
 
                 <div class="modal-nav">
 
-                    <div class="return" id="return-photo">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45"
-                            height="45" viewBox="0 0 45 45">
+                    <div class="return" id='return-photo'>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45"
+                            viewBox="0 0 45 45">
                             <defs>
-                                <linearGradient id="linear-gradient-return" y1="0.842" x2="1" y2="0.338"
-                                    gradientUnits="objectBoundingBox">
+                                <linearGradient id="linear-gradient-return-photo" y1="0.842" x2="1" y2="0.338" gradientUnits="objectBoundingBox">
                                     <stop offset="0" stop-color="#008ebc" />
                                     <stop offset="1" stop-color="#030753" />
                                 </linearGradient>
                             </defs>
                             <path id="Tracé_140" data-name="Tracé 140"
                                 d="M467.016,324.514l16.432-16.2c.206-.3.564-.953-.305-1.808l-2.611-2.562L458.4,325.663a1.923,1.923,0,0,0,.052,2.862l2.274,2.183h0l18.342,18a1.325,1.325,0,0,0,1.843-.3l2.611-2.562L467,329.628h34.7c.362-.071,1.087-.283,1.087-1.491v-3.622Z"
-                                transform="translate(-457.784 -303.949)" opacity="0.3" fill="url(#linear-gradient-return)" />
+                                transform="translate(-457.784 -303.949)" opacity="0.3" fill="url(#linear-gradient-return-photo)" />
                         </svg>
                     </div>
 
@@ -262,10 +261,10 @@
         </div>
     </div>
     
-    <div class="site-wrapper">
+    <div class="site-wrapper display">
 
         <header>
-            <div class="module" id="header">
+            <div class="module display" id="header">
                 <div class="module-wrapper">
 
                     <div id="burger">
@@ -291,7 +290,7 @@
 
         <main>
 
-            <div class="module" id="about">
+            <div class="module display" id="about">
                 <div class="module-wrapper">
                     <div class="module-content">
 
@@ -352,7 +351,7 @@
                 </div>
             </div>
 
-            <div class="module" id="work">
+            <div class="module display" id="work">
                 <div class="module-wrapper">
                     <div class="module-content">
 
@@ -388,7 +387,7 @@
                 </div>
             </div>
 
-            <div class="module" id="photo">
+            <div class="module display" id="photo">
                 <div class="module-wrapper">
                     <div class="module-content">
                         <h2>
@@ -422,59 +421,59 @@
                 </div>
             </div>
 
-            <div class="module" id="contact">
+            <div class="module display" id="contact">
                 <div class="module-wrapper">
 
-                    <h2>
-                        Contact
-                    </h2>
-
-                    <div class="form-wrapper">
-
-                        <div class="form-ornement">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="884.198" height="640.592"
-                                viewBox="0 0 884.198 640.592">
-                                <defs>
-                                    <linearGradient id="linear-gradient-form" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                                        <stop offset="0" stop-color="#008ebc" />
-                                        <stop offset="1" stop-color="#030753" />
-                                    </linearGradient>
-                                </defs>
-                                <path id="Tracé_118" data-name="Tracé 118" d="M2257.964,268.934,1731.656,527.577l189.472,381.949,694.726-156.389Z"
-                                    transform="translate(-1731.656 -268.934)" opacity="0.3" fill="url(#linear-gradient-form)" />
-                            </svg>
+                        <h2>
+                            Contact
+                        </h2>
+    
+                        <div class="form-wrapper">
+    
+                            <div class="form-ornement">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="884.198" height="640.592"
+                                    viewBox="0 0 884.198 640.592">
+                                    <defs>
+                                        <linearGradient id="linear-gradient-form" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                                            <stop offset="0" stop-color="#008ebc" />
+                                            <stop offset="1" stop-color="#030753" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path id="Tracé_118" data-name="Tracé 118" d="M2257.964,268.934,1731.656,527.577l189.472,381.949,694.726-156.389Z"
+                                        transform="translate(-1731.656 -268.934)" opacity="0.3" fill="url(#linear-gradient-form)" />
+                                </svg>
+                            </div>
+    
+                            <div class="form">
+                                <form action="" autocomplete="off">
+                                    <fieldset>
+                                        <label for="nom">
+                                            Prenom et Nom
+                                        </label>
+                                        <input class="input" type="text" name="nom" id="nom" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <label for="email">
+                                            E-Mail
+                                        </label>
+                                        <input class="input" type="email" name="email" id="email" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <label class="textarea" for="message">
+                                            Posez-moi vos questions !
+                                        </label>
+                                        <textarea class="input" name="message" id="message" cols="30" rows="10" required></textarea>
+                                    </fieldset>
+                                    <fieldset class="sub-btn">
+                                        <button type="submit">
+                                            <span>
+                                                Envoyer
+                                            </span>
+                                        </button>
+                                    </fieldset>
+                                </form>
+                            </div>
                         </div>
-
-                        <div class="form">
-                            <form action="" autocomplete="off">
-                                <fieldset>
-                                    <label for="nom">
-                                        Prenom et Nom
-                                    </label>
-                                    <input class="input" type="text" name="nom" id="nom" required>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="email">
-                                        E-Mail
-                                    </label>
-                                    <input class="input" type="email" name="email" id="email" required>
-                                </fieldset>
-                                <fieldset>
-                                    <label class="textarea" for="message">
-                                        Posez-moi vos questions !
-                                    </label>
-                                    <textarea class="input" name="message" id="message" cols="30" rows="10" required></textarea>
-                                </fieldset>
-                                <fieldset class="sub-btn">
-                                    <button type="submit">
-                                        <span>
-                                            Envoyer
-                                        </span>
-                                    </button>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
 
                 </div>
             </div>

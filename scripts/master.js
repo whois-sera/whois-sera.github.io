@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // Form Labels Interaction
+    // Form Labels Interaction ********************
 
     // IN
     $('.input').focusin(function () {
@@ -26,18 +26,26 @@ $(document).ready(function () {
         }
     });
 
-    // Off Canevas
-/*
+    // Off Canevas ********************
+
     var burger = $('#burger');
-    var offCanevas = $('.off-canevas');
-    var links = $('#mobile-nav a');
+    var offCanvas = $('#off-canvas');
+    var links = $('#off-canvas a');
+    var close = $('#close');
     burger.click(function () {
-        offCanevas.toggleClass('visible');
+        offCanvas.toggleClass('visible');
+        burger.toggleClass('hide');
     });
     links.click(function () {
-        offCanevas.toggleClass('visible');
+        offCanvas.toggleClass('visible');
+        burger.toggleClass('hide');
     })
-*/
+    close.click(function () {
+        offCanvas.toggleClass('visible');
+        burger.toggleClass('hide');
+    })
+
+    // Objects for Ornement ********************
 
     var wOrnement = './img/ornements/form_work_final.svg'
 
@@ -51,7 +59,11 @@ $(document).ready(function () {
         chartes: './img/ornements/dropshadow-charte.svg'
     }
     
-    // Works Display
+    // Modules
+
+    var site = $('.site-wrapper');
+
+    // Works Display ********************
 
     var wGrid = $('#work-grid');
 
@@ -85,6 +97,12 @@ $(document).ready(function () {
 
     }).done(function (data) {
 
+        // Display Control
+        var modalWork = $('#modal-window-work');
+        var returnWork = $('#return-work');
+        var modalLinksWork = modalWork.find('.modal-nav a');
+
+        // Content wrappers
         var titleDisplay = $("#charte-title");
         var color1Display = $("#charte-color1");
         var color2Display = $("#charte-color2");
@@ -94,6 +112,7 @@ $(document).ready(function () {
         var fontDisplay = $("#fonts");
         var maquetteDisplay = $("#maquette");
 
+        // Void section
         function voidWork() {
 
             titleDisplay.html('');
@@ -106,9 +125,25 @@ $(document).ready(function () {
             maquetteDisplay.html('');
         }
 
+        returnWork.click(function () {
+            voidWork();
+            site.addClass('display');
+            modalWork.removeClass('display');
+        });
+
+        modalLinksWork.click(function () {
+            voidWork();
+            site.addClass('display');
+            modalWork.removeClass('display');
+        });
+
+
         var projectWrapper = $('.project-wrapper').click(function () {
 
             voidWork();
+
+            site.removeClass('display');
+            modalWork.addClass('display');
 
             var wId = $(this).attr('w-id');
             var wTitle = data.works[wId].title;
@@ -141,10 +176,6 @@ $(document).ready(function () {
             }
 
         });
-
-        var returnWork = $('.return-work').click(function () {
-            voidWork();
-        });
     });
 
     var lastPhoto = $('#home-last-photo');
@@ -175,6 +206,11 @@ $(document).ready(function () {
 
     }).done(function (data2) {
 
+        var modalPhoto = $('#modal-window-photo');
+        var returnPhoto = $('#return-photo');
+        var modalLinksPhoto = modalPhoto.find('.modal-nav a');
+        var photoAcces = $('.last-photo-content-wrapper');
+
         var photoGrid = $('#photo-grid');
 
         var pLast = (data2.photos.length)-1;
@@ -194,6 +230,23 @@ $(document).ready(function () {
             date.html('');
             apn.html('');
         }
+
+        photoAcces.click(function () {
+            site.removeClass('display');
+            modalPhoto.addClass('display');
+        })
+
+        modalLinksPhoto.click(function () {
+            voidPhoto();
+            site.addClass('display');
+            modalPhoto.removeClass('display');
+        });
+
+        returnPhoto.click(function () {
+            voidPhoto();
+            site.addClass('display');
+            modalPhoto.removeClass('display');
+        });
 
         for (k = (data2.photos.length)-1; k > -1; k--) {
             var pId = data2.photos[k].id;
@@ -234,10 +287,6 @@ $(document).ready(function () {
             var displayId = $(this).attr('p-id');
             console.log(displayId);
             displayPhoto(displayId);
-        });
-
-        var returnWork = $('.return-photo').click(function () {
-            voidPhoto();
         });
     });
 });
