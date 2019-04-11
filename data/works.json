@@ -4,54 +4,62 @@
             "id": 0,
             "title": "Thé Calin",
             "subTitle": "Projet d'étude WebDesign, 2018",
-            "url": "./img/works/logo-thecalin.svg",
-            "color1": "#AFD580",
-            "color2": "#222222",
-            "color3": "#EFEFEF",
+            "logo": "./img/works/logo-thecalin.svg",
+            "colors": [
+                "#AFD580",
+                "#222222",
+                "#EFEFEF"
+            ],
             "maquette": "./img/works/thecalin-maquette.jpg",
             "fonts": [
-                "roboto"
+                "Roboto"
             ]
         },
         {
             "id": 1,
             "title": "Médiathèque Philarmonie de Paris",
             "subTitle": "Projet d'étude WebDesign, 2018",
-            "url": "./img/works/logo-mediatheque.svg",
-            "color1": "#FBC02C",
-            "color2": "#212121",
-            "color3": "#FAFAFA",
+            "logo": "./img/works/logo-mediatheque.svg",
+            "colors": [
+                "#FBC02C",
+                "#212121",
+                "#FAFAFA"
+            ],
             "maquette": "./img/works/philarmonie-maquette.jpg",
             "fonts": [ 
-                "montserrat"
+                "Montserrat"
             ]
         },
         {
             "id": 2,
             "title": "ShareBox Fablab et CoWorking",
             "subTitle": "Projet d'étude WebDesign, 2018",
-            "url": "./img/works/logo-sharebox.svg",
-            "color1": "#094869",
-            "color2": "#BA8B61",
-            "color3": "#F5F5F5",
+            "logo": "./img/works/logo-sharebox.svg",
+            "colors": [
+                "#094869",
+                "#BA8B61",
+                "#F5F5F5"
+            ],
             "maquette": "./img/works/sharebox-maquette.jpg",
             "fonts": [
-                "montserrat",
-                "orbitron"
+                "Montserrat",
+                "Orbitron"
             ]
         },
         {
             "id": 3,
             "title": "Caroline Blanchet",
             "subTitle": "Projet d'étude WebDesign, 2018",
-            "url": "./img/works/logo-ptitcao.svg",
-            "color1": "#FBC02C",
-            "color2": "#011C3A",
-            "color3": "#EEEEEE",
+            "logo": "./img/works/logo-ptitcao.svg",
+            "colors": [
+                "#FBC02C",
+                "#011C3A",
+                "#EEEEEE"
+            ],
             "maquette": "./img/works/ptitecao-maquette.jpg",
             "fonts": [
-                "montserrat",
-                "impact"
+                "Montserrat",
+                "Impact"
             ]
         }
     ]

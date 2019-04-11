@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="763" height="861.9" viewBox="0 0 763 861.9">
-  <defs>
-    <linearGradient id="linear-gradient" x1="1.097" y1="0.451" x2="-0.226" y2="0.431" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#04004e"/>
-      <stop offset="1" stop-color="#008ebc"/>
-    </linearGradient>
-  </defs>
-  <path id="form_photo_portrait" d="M762.6,198.9,142.9-.4-.4,450.7,675,861.5Z" transform="translate(0.4 0.4)" opacity="0.3" fill="url(#linear-gradient)"/>
-</svg>
