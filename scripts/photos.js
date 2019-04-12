@@ -62,11 +62,11 @@ $(document).ready(function () {
 
         this.pInfo = $('<div>').addClass('photo-info');
 
-        this.pPlace = $('<h3>').append(place);
+        this.pPlace = $('<p>').append(place);
 
-        this.pDate = $('<h3>').append(date);
+        this.pDate = $('<p>').append(date);
 
-        this.pApn = $('<h3>').append(apn);
+        this.pApn = $('<p>').append(apn);
 
         this.build = build;
 

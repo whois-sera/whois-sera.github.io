@@ -1,0 +1,494 @@
+// Colors
+
+$alphaWhite: rgba(255, 255, 255, 0.7);
+$alphaBlack: rgba(0, 0, 0, 0.3);
+$white: #ffffff;
+$black: #000000;
+$blackLight: #424242;
+$grey: #F2F2F2;
+
+// Font Face ********************
+
+@font-face {
+    font-family: "ailerons";
+    src: url("../fonts/ailerons/webfont/ailerons-typeface-webfont.woff2") format("woff2");
+}
+
+// Font Vars ********************
+
+$ailerons: "ailerons", sans-serif;
+$oswald: 'Oswald', sans-serif;
+$quicksand: 'Quicksand', sans-serif;
+
+@media screen and (max-width: 1199px) {
+    
+    #about {
+
+        .module-wrapper {
+            width: 100%;
+        }
+    }
+
+    #works {
+
+        .module-wrapper {
+            width: 100%;
+        }
+    }
+
+    #photos {
+
+        .module-content {
+            padding: 0px 50px;
+        }
+
+        .module-wrapper {
+            width: 100%;
+        }
+    }
+
+    #contact {
+        .module-wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1149px) {
+
+    .sera-logo {
+        display: block;
+    }
+
+    .header-shape {
+        display: none;
+    }
+
+    .orn-header {
+        display: none;
+    }
+
+    #header {
+
+        .module-content {
+
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    .form-shape {
+        top: 15%;
+        left: 50%;
+        width: 85%;
+        transform: translateX(-50%) translateY(-15%);
+    }
+}
+
+@media screen and (max-width: 958px) {
+
+    #work-grid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work-home-wrapper {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .about-shape {
+        display: none;
+    }
+
+    #about {
+
+        .module-content {
+            width: 100%;
+        }
+    }
+
+    .module-content {
+        width: 100%;
+    }
+
+    .orn-photo {
+        display: none;
+    }
+
+    #contact {
+
+        .content {
+            width: 70%;
+        }
+    }
+
+    #about {
+
+        .content {
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 849px) {
+
+    #burger {
+        width: 30px;
+        height: 30px;
+        top: 30px;
+        left: 30px;
+    }
+
+    .module {
+        margin-bottom: 40px!important;
+
+        &:last-child {
+            margin-bottom: 0px!important;
+        }
+    }
+
+    .module-content {
+        margin-bottom: 20px!important;
+    }
+
+    .work-home-wrapper-content {
+
+        .work-shard {
+            transform: translateX(-50%) translateY(0px);
+        }  
+    }
+
+    #off-canvas {
+        top: 0%;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+
+        .module-wrapper {
+            height: 100%;
+        }
+
+        .module-content {
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+        }
+
+        .top-nav {
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px;
+            height: 100%;
+            background-color: $white;
+        }
+
+        nav {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li {
+            margin-right: 0px;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-right: 0px;
+                margin-bottom: 0px;
+            }
+        }
+
+    }
+
+    #close-canvas {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .nav-logo {
+        display: block;
+        width: 150px;
+        margin-bottom: 30px;
+    }
+
+    .off-canvas-shard {
+        display: block;
+        width: 150px;
+    }
+
+    .footer-shape {
+        display: none;
+    }
+
+    #footer {
+        background-image: linear-gradient(to right, #b2deea, #b3b1c9);
+        padding: 20px;
+
+        .bottom-nav {
+            position: initial;
+            width: 100%;
+            z-index: 20;
+
+            svg {
+                width: 30px;
+            }
+        }
+
+        .module-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    #modal-work,
+    #modal-photo {
+
+        .module-wrapper {
+            padding: 0px;
+        }
+    }
+
+    .colors {
+        flex-direction: column;
+    }
+
+    .color {
+        margin-right: 0px;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    .color-shape {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+
+    #close-work,
+    #close-photo {
+        top: 10px!important;
+        left: 10px!important;
+    }
+
+    .fonts {
+        flex-direction: column;
+    }
+
+    .font {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 549px) {
+
+    .form-shape {
+        display: none;
+    }
+
+    .module-next {
+        width: 30px;
+    }
+
+    .work-home-wrapper {
+        padding: 0px;
+    }
+
+    #photos {
+
+        .module-content {
+            padding: 0px;
+        }
+    }
+
+    #form {
+
+        textarea {
+            min-height: 200px;
+        }
+    }
+
+    h1 {
+        font-family: $ailerons;
+        font-size: 20px;
+        text-align: center;
+        color: $black;
+    }
+
+    h2 {
+        font-family: $ailerons;
+        font-size: 20px;
+        color: $black;
+    }
+
+    h3 {
+        font-family: $ailerons;
+        font-size: 18px;
+        color: $black;
+    }
+
+    #header {
+
+        .content {
+
+            p {
+                font-family: $quicksand;
+                font-size: 16px;
+                text-align: center;
+                color: $black;
+            }
+        }
+    }
+
+    #about {
+
+        .content {
+
+            p {
+                font-family: $quicksand;
+                font-size: 16px;
+                color: $black;
+            }
+        }
+    }
+
+    .work-home-wrapper-content {
+        p {
+            font-family: $quicksand;
+            font-size: 16px;
+            text-align: center;
+            color: $black;
+        }
+
+        h3 {
+            color: $black;
+            text-align: center;
+        }
+    }
+
+    form {
+
+        label {
+            font-family: $quicksand;
+            font-size: 14px;
+            color: $black;
+        }
+
+        input {
+            font-family: $quicksand;
+            font-size: 14px;
+            color: $black;
+            background-image: linear-gradient(to right, #b2deea, #b3b1c9);
+        }
+
+        textarea {
+            font-family: $quicksand;
+            font-size: 14px;
+            color: $black;
+            background-image: linear-gradient(to right, #b2deea, #b3b1c9);
+        }
+
+        button {
+            font-family: $ailerons;
+            font-size: 14px;
+            text-align: right;
+            color: $black;
+        }
+    }
+
+    .photo-info {
+        font-family: $quicksand;
+        font-size: 18px;
+    }
+
+    .color {
+
+        p {
+            font-family: $ailerons;
+            font-size: 25px;
+        }
+    }
+
+    #off-canvas {
+
+        a {
+            font-family: $ailerons;
+            font-size: 24px;
+            text-decoration: none;
+            color: $black;
+
+            transition: all 0.20s ease-in-out;
+
+            &:hover {
+                color: $blackLight;
+            }
+        }
+    }
+
+    #modal-work {
+
+        h3 {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .colors {
+
+            p {
+                font-size: 18px;
+                color: $black;
+            }
+        }
+
+        .font {
+
+            p {
+                font-size: 18px;
+                color: $black;
+            }
+
+            p.title {
+                font-size: 20px
+            }
+        }
+    }
+
+    #photo-container {
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .photo-info {
+
+        p {
+            font-family: $quicksand;
+            font-size: 18px;
+            color: $black;
+        }
+    }
+}

@@ -25,6 +25,7 @@ $quicksand: 'Quicksand', sans-serif;
 h1 {
     font-family: $ailerons;
     font-size: 60px;
+    text-align: center;
     color: $black;
 }
 
@@ -47,16 +48,20 @@ h3 {
         p {
             font-family: $quicksand;
             font-size: 30px;
+            text-align: center;
             color: $black;
         }
     }
 }
 
 #about {
+
     .content {
+
         p {
             font-family: $quicksand;
             font-size: 20px;
+            color: $black;
         }
     }
 }
@@ -65,6 +70,13 @@ h3 {
     p {
         font-family: $quicksand;
         font-size: 18px;
+        text-align: center;
+        color: $black;
+    }
+    
+    h3 {
+        color: $black;
+        text-align: center;
     }
 }
 
@@ -125,17 +137,6 @@ form {
     }
 }
 
-.work-home-wrapper-content {
-    
-    h3 {
-        text-align: center;
-    }
-
-    p {
-        text-align: center;
-    }
-}
-
 #modal-work {
     
     h3 {
@@ -161,6 +162,22 @@ form {
         p.title {
             font-size: 24px
         }
+    }
+}
+
+#photo-container {
+
+    h3 {
+        text-align: center;
+    }
+}
+
+.photo-info {
+
+    p {
+        font-family: $quicksand;
+        font-size: 18px;
+        color: $black;
     }
 }
 
@@ -208,6 +225,13 @@ p {
     width: 50px;
 }
 
+// Wrapper ********************
+
+.site-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
 // Cursor ********************
 
 #burger,
@@ -219,9 +243,9 @@ p {
 
 #off-canvas {
     position: fixed;
-    width: 100%;
     top: -100%;
     left: 0px;
+    width: 100%;
     z-index: 100;
     transition: all 0.40s ease-in-out;
     
@@ -259,6 +283,7 @@ p {
 #off-canvas.visible {
     display: block;
     top: 0%;
+    left: 0px;
 }
 
 #close-canvas {
@@ -282,20 +307,18 @@ p {
     z-index: 200;
 
     .module-wrapper {
+        position: fixed;
         width: 100vw;
         height: 100vh;
-        background-color: $alphaWhite;
         padding: 50px;
-        position: fixed;
+        background-color: $alphaWhite;
     }
 
     .module-content {
-        width: 100%;
-        height: 100%;
-        background-color: $white;
         position: relative;
         width: 100%;
         height: 100%;
+        background-color: $white;
         overflow: scroll;
     }
 
@@ -408,20 +431,18 @@ p {
     z-index: 200;
 
     .module-wrapper {
+        position: fixed;
         width: 100vw;
         height: 100vh;
+        padding: 30px;
         background-color: $alphaWhite;
-        padding: 50px;
-        position: fixed;
     }
 
     .module-content {
-        width: 100%;
-        height: 100%;
-        background-color: $white;
         position: relative;
         width: 100%;
         height: 100%;
+        background-color: $white;
     }
 
     .close {
@@ -438,17 +459,24 @@ p {
     }
 }
 
-#modal-photo {
-    display: none;
-}
-
 #modal-photo.visible {
     display: block;
 }
 
-.photo-container {
+#photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 70%;
     height: 100%;
+    padding: 30px;
+    margin: 0 auto;
+
+    h3 {
+        height: 10%;
+        //margin-bottom: 30px; 
+    }
 }
 
 .photo-wrapper {
@@ -457,25 +485,26 @@ p {
 }
 
 .photo-wrapper-content {
+    position: relative;
     width: 100%;
     height: 100%;
-
-    position: relative;
+    overflow: scroll;
 
     img {
         position: relative;
+        width: 100%;
+        height: 90%;
+        object-fit: scale-down;
         z-index: 20;
-        width: 800px;
-        object-fit: contain;
     }
 }
 
 .photo-info {
-    position: absolute;
-    top: 0%;
-    left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%;
     padding: 5%;
 }
 
@@ -496,9 +525,8 @@ p {
        justify-content: center;
        align-items: center;
        position: relative;
-       z-index: 20;
-       width: 1200px;
        margin: 0 auto;
+       z-index: 20;
     }
 
     h1 {
@@ -513,9 +541,10 @@ p {
 
 #burger { 
     position: fixed;
-    width: 50px;
     top: 50px;
     left: 50px;
+    width: 50px;
+    z-index: 100;
     opacity: 1;
     transition: all 0.20s ease-in-out;
 
@@ -528,14 +557,20 @@ p {
     opacity: 0;
 }
 
+.sera-logo {
+    display: none;
+    width: 150px;
+    margin-bottom: 30px;
+}
+
 .orn-header {
     position: absolute;
     z-index: 10;
 }
 
 #oh-ml {
-    left: 0%;
     top: 50%;
+    left: 0%;
     transform: translateY(-50%);
 }
 
@@ -577,12 +612,12 @@ p {
     }
 
     .module-content {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 50%;
-        position: relative;
         margin-bottom: 100px;
     }
 
@@ -605,8 +640,8 @@ p {
     position: absolute;
     top: 50%;
     left: 0%;
-    transform: translateX(-50%) translateY(-50%);
     width: 100%;
+    transform: translateX(-50%) translateY(-50%);
     z-index: 10;
 
     img {
@@ -664,8 +699,8 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
     position: relative;
+    padding: 50px;
 
     h3 {
         margin-bottom: 30px;
@@ -689,16 +724,16 @@ p {
     }
 
     .work-shard {
-        width: 50%;
         position: absolute;
         top: 0px;
         left: 50%;
+        width: 50%;
         transform: translateX(-50%) translateY(-50%);
         z-index: 10;
     }
 }
 
-// About ********************
+// Photos ********************
 
 #photos {
     margin-bottom: 150px;
@@ -721,19 +756,19 @@ p {
     }
 
     .module-content {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: relative;
-        margin-bottom: 100px;
         width: 100%;
+        margin-bottom: 100px;
     }
 }
 
 .photo-grid-wrapper {
-    width: 100%;
     position: relative;
+    width: 100%;
 }
 
 .uk-slider-container {
@@ -769,11 +804,13 @@ p {
 }
 
 .photo-home-wrapper {
-    height: 400px;
+    height: 500px;
     cursor: pointer;
 
     img {
-        object-fit: contain;
+        min-height: 500px;
+        object-fit: cover;
+        object-position: center center;
     }
 }
 
@@ -805,17 +842,17 @@ p {
         justify-content: center;
         align-items: center;
         position: relative;
-        margin-bottom: 100px;
         width: 100%;
+        margin-bottom: 100px;
     }
 
     .content {
-        width: 50%;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        width: 50%;
     }
 }
 
@@ -823,8 +860,8 @@ p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     width: 85%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 form {
@@ -833,8 +870,8 @@ form {
     fieldset {
         position: relative;
         padding: 0px;
-        border: none;
         margin-bottom: 40px;
+        border: none;
 
         &:last-child {
             margin-bottom: 0px;
@@ -843,11 +880,11 @@ form {
 
     label {
         position: absolute;
-        z-index: 20;
         top: 50%;
         left: 15px;
-        transform: translateY(-50%);
+        z-index: 20;
         transition: all 0.25s ease-in-out;
+        transform: translateY(-50%);
     }
 
     label.translate {
@@ -871,9 +908,9 @@ form {
         display: block;
         position: relative;
         width: 100%;
+        padding: 15px;
         z-index: 10;
         border: none;
-        padding: 15px;
 
         &:focus {
             outline: none;
@@ -901,12 +938,12 @@ form {
 
     button {
         display: block;
-        width: 50%;
-        border: none;
         position: relative;
-        z-index: 10;
-        padding: 0px 20px;
         float: right;
+        width: 50%;
+        padding: 0px 20px;
+        border: none;
+        z-index: 10;
         background-image: linear-gradient(to right, #b2deea, #b3b1c9);
         
 
@@ -946,11 +983,11 @@ form {
     }
 
     .bottom-nav {
-        width: 100%;
         position: absolute;
-        z-index: 20;
         bottom: 10%;
-        left: 0%
+        left: 0%;
+        width: 100%;
+        z-index: 20;
     }
 
     ul {
@@ -968,7 +1005,7 @@ form {
         }
 
         svg {
-            width: 100px;
+            width: 50px;
         }
     }
 }

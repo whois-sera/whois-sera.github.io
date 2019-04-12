@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "ailerons";
+  src: url("../fonts/ailerons/webfont/ailerons-typeface-webfont.woff2") format("woff2"); }
+
+@media screen and (max-width: 1199px) {
+  #about .module-wrapper {
+    width: 100%; }
+  #works .module-wrapper {
+    width: 100%; }
+  #photos .module-content {
+    padding: 0px 50px; }
+  #photos .module-wrapper {
+    width: 100%; }
+  #contact .module-wrapper {
+    width: 100%; } }
+
+@media screen and (max-width: 1149px) {
+  .sera-logo {
+    display: block; }
+  .header-shape {
+    display: none; }
+  .orn-header {
+    display: none; }
+  #header .module-content {
+    margin-bottom: 0px; } }
+
+@media screen and (max-width: 1079px) {
+  .form-shape {
+    top: 15%;
+    left: 50%;
+    width: 85%;
+    transform: translateX(-50%) translateY(-15%); } }
+
+@media screen and (max-width: 958px) {
+  #work-grid {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .work-home-wrapper {
+    width: 100%;
+    margin-bottom: 0px; }
+  .about-shape {
+    display: none; }
+  #about .module-content {
+    width: 100%; }
+  .module-content {
+    width: 100%; }
+  .orn-photo {
+    display: none; }
+  #contact .content {
+    width: 70%; }
+  #about .content p {
+    text-align: center; } }
+
+@media screen and (max-width: 849px) {
+  #burger {
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    left: 30px; }
+  .module {
+    margin-bottom: 40px !important; }
+    .module:last-child {
+      margin-bottom: 0px !important; }
+  .module-content {
+    margin-bottom: 20px !important; }
+  .work-home-wrapper-content .work-shard {
+    transform: translateX(-50%) translateY(0px); }
+  #off-canvas {
+    top: 0%;
+    left: -100%;
+    width: 100vw;
+    height: 100vh; }
+    #off-canvas .module-wrapper {
+      height: 100%; }
+    #off-canvas .module-content {
+      width: 100%;
+      height: 100%;
+      padding: 0px; }
+    #off-canvas .top-nav {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px;
+      height: 100%;
+      background-color: #ffffff; }
+    #off-canvas nav {
+      margin-bottom: 30px; }
+    #off-canvas ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    #off-canvas li {
+      margin-right: 0px;
+      margin-bottom: 20px; }
+      #off-canvas li:last-child {
+        margin-right: 0px;
+        margin-bottom: 0px; }
+  #close-canvas {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px; }
+  .nav-logo {
+    display: block;
+    width: 150px;
+    margin-bottom: 30px; }
+  .off-canvas-shard {
+    display: block;
+    width: 150px; }
+  .footer-shape {
+    display: none; }
+  #footer {
+    background-image: linear-gradient(to right, #b2deea, #b3b1c9);
+    padding: 20px; }
+    #footer .bottom-nav {
+      position: initial;
+      width: 100%;
+      z-index: 20; }
+      #footer .bottom-nav svg {
+        width: 30px; }
+    #footer .module-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+  #modal-work .module-wrapper,
+  #modal-photo .module-wrapper {
+    padding: 0px; }
+  .colors {
+    flex-direction: column; }
+  .color {
+    margin-right: 0px;
+    margin-bottom: 30px; }
+    .color:last-child {
+      margin-bottom: 0px; }
+  .color-shape {
+    width: 100px;
+    margin-bottom: 30px; }
+  #close-work,
+  #close-photo {
+    top: 10px !important;
+    left: 10px !important; }
+  .fonts {
+    flex-direction: column; }
+  .font {
+    margin-right: 0px;
+    margin-bottom: 30px; }
+    .font:last-child {
+      margin-bottom: 0px; } }
+
+@media screen and (max-width: 549px) {
+  .form-shape {
+    display: none; }
+  .module-next {
+    width: 30px; }
+  .work-home-wrapper {
+    padding: 0px; }
+  #photos .module-content {
+    padding: 0px; }
+  #form textarea {
+    min-height: 200px; }
+  h1 {
+    font-family: "ailerons", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #000000; }
+  h2 {
+    font-family: "ailerons", sans-serif;
+    font-size: 20px;
+    color: #000000; }
+  h3 {
+    font-family: "ailerons", sans-serif;
+    font-size: 18px;
+    color: #000000; }
+  #header .content p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #000000; }
+  #about .content p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    color: #000000; }
+  .work-home-wrapper-content p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #000000; }
+  .work-home-wrapper-content h3 {
+    color: #000000;
+    text-align: center; }
+  form label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color: #000000; }
+  form input {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-image: linear-gradient(to right, #b2deea, #b3b1c9); }
+  form textarea {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-image: linear-gradient(to right, #b2deea, #b3b1c9); }
+  form button {
+    font-family: "ailerons", sans-serif;
+    font-size: 14px;
+    text-align: right;
+    color: #000000; }
+  .photo-info {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px; }
+  .color p {
+    font-family: "ailerons", sans-serif;
+    font-size: 25px; }
+  #off-canvas a {
+    font-family: "ailerons", sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.20s ease-in-out; }
+    #off-canvas a:hover {
+      color: #424242; }
+  #modal-work h3 {
+    font-size: 20px;
+    text-align: center; }
+  #modal-work .colors p {
+    font-size: 18px;
+    color: #000000; }
+  #modal-work .font p {
+    font-size: 18px;
+    color: #000000; }
+  #modal-work .font p.title {
+    font-size: 20px; }
+  #photo-container h3 {
+    text-align: center; }
+  .photo-info p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    color: #000000; } }
