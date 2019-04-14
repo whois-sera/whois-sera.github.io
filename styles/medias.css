@@ -64,6 +64,8 @@
       margin-bottom: 0px !important; }
   .module-content {
     margin-bottom: 20px !important; }
+  #footer .module-content {
+    margin-bottom: 0px !important; }
   .work-home-wrapper-content .work-shard {
     transform: translateX(-50%) translateY(0px); }
   #off-canvas {
@@ -140,8 +142,8 @@
     margin-bottom: 30px; }
   #close-work,
   #close-photo {
-    top: 10px !important;
-    left: 10px !important; }
+    top: 20px !important;
+    left: 20px !important; }
   .fonts {
     flex-direction: column; }
   .font {

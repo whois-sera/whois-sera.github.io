@@ -183,13 +183,17 @@ p {
 
 #modal-work {
   display: none;
-  position: relative;
-  z-index: 200; }
+  position: fixed;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  padding: 3vw; }
   #modal-work .module-wrapper {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    padding: 50px;
+    position: relative;
+    width: 100%;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.7); }
   #modal-work .module-content {
     position: relative;
@@ -202,7 +206,8 @@ p {
     top: 80px;
     left: 80px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    z-index: 100; }
     #modal-work .close svg {
       width: 100%;
       height: 100%; }
@@ -268,28 +273,36 @@ p {
 
 #modal-photo {
   display: none;
-  position: relative;
-  z-index: 200; }
+  position: fixed;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  padding: 3vw; }
   #modal-photo .module-wrapper {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    padding: 30px;
+    position: relative;
+    width: 100%;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.7); }
   #modal-photo .module-content {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    overflow: scroll; }
   #modal-photo .close {
     position: fixed;
     top: 80px;
     left: 80px;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    z-index: 100; }
     #modal-photo .close svg {
       width: 100%;
       height: 100%; }
+  #modal-photo h3 {
+    margin-bottom: 50px; }
 
 #modal-photo.visible {
   display: block; }
@@ -299,7 +312,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
   height: 100%;
   padding: 30px;
   margin: 0 auto; }
@@ -313,13 +326,12 @@ p {
 .photo-wrapper-content {
   position: relative;
   width: 100%;
-  height: 100%;
-  overflow: scroll; }
+  height: 100%; }
   .photo-wrapper-content img {
     position: relative;
     width: 100%;
-    height: 90%;
-    object-fit: scale-down;
+    height: 100%;
+    object-fit: contain;
     z-index: 20; }
 
 .photo-info {

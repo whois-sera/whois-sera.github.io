@@ -303,14 +303,18 @@ p {
 
 #modal-work {
     display: none;
-    position: relative;
+    position: fixed;
     z-index: 200;
-
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    padding: 3vw;
+    
     .module-wrapper {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        padding: 50px;
+        position: relative;
+        width: 100%;
+        height: 100%;
         background-color: $alphaWhite;
     }
 
@@ -328,6 +332,7 @@ p {
         left: 80px;
         width: 30px;
         height: 30px;
+        z-index: 100;
 
         svg {
             width: 100%;
@@ -427,14 +432,18 @@ p {
 
 #modal-photo {
     display: none;
-    position: relative;
+    position: fixed;
     z-index: 200;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    padding: 3vw;
 
     .module-wrapper {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        padding: 30px;
+        position: relative;
+        width: 100%;
+        height: 100%;
         background-color: $alphaWhite;
     }
 
@@ -443,6 +452,7 @@ p {
         width: 100%;
         height: 100%;
         background-color: $white;
+        overflow: scroll;
     }
 
     .close {
@@ -451,11 +461,16 @@ p {
         left: 80px;
         width: 30px;
         height: 30px;
+        z-index: 100;
 
         svg {
             width: 100%;
             height: 100%;
         }
+    }
+
+    h3 {
+        margin-bottom: 50px;
     }
 }
 
@@ -468,14 +483,13 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 100%;
     height: 100%;
     padding: 30px;
     margin: 0 auto;
 
     h3 {
         height: 10%;
-        //margin-bottom: 30px; 
     }
 }
 
@@ -488,13 +502,12 @@ p {
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: scroll;
 
     img {
         position: relative;
         width: 100%;
-        height: 90%;
-        object-fit: scale-down;
+        height: 100%;
+        object-fit: contain;
         z-index: 20;
     }
 }
