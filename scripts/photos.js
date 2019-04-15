@@ -80,8 +80,8 @@ $(document).ready(function () {
 
     // Photo Display
 
-    var worksData = $.getJSON("./data/photos.json", function (data) {
-    //var photoData = $.getJSON("https://api.myjson.com/bins/jkly8", function (data) {
+    //var worksData = $.getJSON("./data/photos.json", function (data) {
+    var photoData = $.getJSON("https://api.myjson.com/bins/jkly8", function (data) {
 
         for (i = (data.photos.length) - 1; i > -1; i--) {
 

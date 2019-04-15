@@ -490,6 +490,7 @@ p {
 
     h3 {
         height: 10%;
+        margin-bottom: 30px;
     }
 }
 
@@ -501,7 +502,10 @@ p {
 .photo-wrapper-content {
     position: relative;
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
     img {
         position: relative;
@@ -515,7 +519,7 @@ p {
 .photo-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     padding: 5%;

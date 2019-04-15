@@ -102,8 +102,8 @@ $(document).ready(function () {
 
     // Works Display
 
-    var worksData = $.getJSON("./data/works.json", function (data) {
-    //var worksData = $.getJSON("https://api.myjson.com/bins/19t2n8", function (data) {
+    //var worksData = $.getJSON("./data/works.json", function (data) {
+    var worksData = $.getJSON("https://api.myjson.com/bins/19t2n8", function (data) {
 
         for (i = (data.works.length) - 1; i > -1; i--) {
 
