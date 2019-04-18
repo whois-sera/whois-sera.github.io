@@ -425,7 +425,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 60%;
     margin-bottom: 100px; }
   #about .content {
     display: flex;
